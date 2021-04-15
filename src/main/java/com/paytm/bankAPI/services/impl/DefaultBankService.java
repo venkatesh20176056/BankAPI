@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.paytm.bankAPI.dao.BankDao;
 import com.paytm.bankAPI.entities.Bank;
+import com.paytm.bankAPI.exceptions.InvalidMongoException;
 import com.paytm.bankAPI.services.BankService;
 
 @Service
@@ -21,7 +22,7 @@ public class DefaultBankService implements BankService {
 	}
 
 	@Override
-	public List<Bank> getAllBankDetails() {
+	public List<Bank> getAllBankDetails() throws InvalidMongoException {
 		
 		return bankDao.getAllBankDetails();
 	}

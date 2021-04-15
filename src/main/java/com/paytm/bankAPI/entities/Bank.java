@@ -3,51 +3,51 @@ package com.paytm.bankAPI.entities;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "bank")
+@Document(collection = "bank_details")
 public class Bank {
 	
-	@Field("name")
-	private String name;
+	@Field("name_of_bank")
+	private String nameOfBank;
 	
-	@Field("ifsc")
-	private String ifsc;
+	@Field("ifsc_of_bank")
+	private String ifscOfBank;
 	
-	@Field("branch")
-	private String branch;
+	@Field("branch_of_bank")
+	private String branchOfBank;
 	
-	@Field("transactions")
-	private Long transactions;
+	@Field("transactions_of_bank")
+	private Long transactionsOfBank;
 
-	public String getName() {
-		return name;
+	public String getNameOfBank() {
+		return nameOfBank;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNameOfBank(String nameOfBank) {
+		this.nameOfBank = nameOfBank;
 	}
 
-	public String getIfsc() {
-		return ifsc;
+	public String getIfscOfBank() {
+		return ifscOfBank;
 	}
 
-	public void setIfsc(String ifsc) {
-		this.ifsc = ifsc;
+	public void setIfscOfBank(String ifscOfBank) {
+		this.ifscOfBank = ifscOfBank;
 	}
 
-	public String getBranch() {
-		return branch;
+	public String getBranchOfBank() {
+		return branchOfBank;
 	}
 
-	public void setBranch(String branch) {
-		this.branch = branch;
+	public void setBranchOfBank(String branchOfBank) {
+		this.branchOfBank = branchOfBank;
 	}
 
-	public Long getTransactions() {
-		return transactions;
+	public Long getTransactionsOfBank() {
+		return transactionsOfBank;
 	}
 
-	public void setTransactions(Long transactions) {
-		this.transactions = transactions;
+	public void setTransactionsOfBank(Long transactionsOfBank) {
+		this.transactionsOfBank = transactionsOfBank;
 	}
-	
+
 }
