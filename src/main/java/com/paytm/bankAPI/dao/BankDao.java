@@ -8,4 +8,6 @@ import com.paytm.bankAPI.exceptions.InvalidMongoException;
 public interface BankDao {
 	
 	public List<Bank> getAllBankDetails() throws InvalidMongoException;
+	
+	public String insertBank(String name, String ifsc);
 }

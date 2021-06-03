@@ -15,7 +15,7 @@ import com.paytm.bankAPI.entities.Bank;
 import com.paytm.bankAPI.enums.ErrorMessages;
 import com.paytm.bankAPI.exceptions.InvalidMongoException;
 
-@Repository
+@Repository("accessData")
 public class DefaultBankDao implements BankDao {
 	
 	private MongoOperations mongoOperations;
@@ -40,6 +40,19 @@ public class DefaultBankDao implements BankDao {
 			LOGGER.info("data", b);
 		
 		return bankList;
+	}
+
+	@Override
+	public String insertBank(String name, String ifsc) {
+		
+		Bank bank = new Bank();
+		
+		bank.setNameOfBank(name);
+		bank.setIfscOfBank(ifsc);
+		
+		mongoOperations.insert(bank);
+
+		return "Successfully inserted";
 	}
 
 }
